@@ -2,4 +2,17 @@
   border: 1px dashed;
   margin: auto;
   display: block;
+  background-image: url(../images/grid.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+body {
+  background: #6CEFF1;
+}
+
+h1 {
+  text-align: center;
+  font-size: 65px;
+}
+
