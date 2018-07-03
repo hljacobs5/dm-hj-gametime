@@ -4,7 +4,7 @@ const GamePiece = require('../lib/GamePiece.js');
 describe('GamePiece', function () {
 
   it('should have properties', function () {
-    const gamePiece = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', 1pwp);
+    const gamePiece = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)');
     const expectedObj = {
       x: 50,
       y: 50,
