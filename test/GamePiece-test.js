@@ -4,7 +4,7 @@ const GamePiece = require('../lib/GamePiece.js');
 describe('GamePiece', function () {
 
   it('should have properties', function () {
-    const gamePiece = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)');
+    const gamePiece = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', 1, 1);
     const expectedObj = {
       x: 50,
       y: 50,
@@ -12,7 +12,11 @@ describe('GamePiece', function () {
       width: 10,
       color: 'rgb(250, 0, 0)',
       dx: 1,
-      dxv: 1
+      dxv: 1,
+      dy: 1,
+      dyv: 0,
+      trail: [],
+      score: 0
     };
 
     assert.deepEqual(gamePiece, expectedObj);
@@ -23,15 +27,13 @@ describe('GamePiece', function () {
     const gamePiece2 = new GamePiece(58, 58, 10, 10, 'rgb(250, 0, 0', 1);
 
     const isColliding = gamePiece1.isCollidingWith(gamePiece2);
-
     assert.isTrue(isColliding);
   })
   
   it('should be able to move', function () {
     const gamePiece = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', 1);
 
-    assert.equal(gamePiece.x, 30);
-    gamePiece.move(10);
-    assert.equal(gamePiece.x,30)
+    gamePiece.move();
+    assert.equal(gamePiece.x, 51)
   })
 })
