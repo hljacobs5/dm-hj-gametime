@@ -15,8 +15,7 @@ describe('GamePiece', function () {
       dxv: 1,
       dy: 1,
       dyv: 0,
-      trail: [],
-      score: 0
+      trail: []
     };
 
     assert.deepEqual(gamePiece, expectedObj);
@@ -32,7 +31,6 @@ describe('GamePiece', function () {
   
   it('should be able to move', function () {
     const gamePiece = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', 1);
-
     gamePiece.move();
     assert.equal(gamePiece.x, 51)
   })
