@@ -17,3 +17,16 @@ h1 {
   font-family: 'Russo One', sans-serif;
 }
 
+h3 {
+  font-size: 10px;
+  font-family: 'Russo One', sans-serif;
+  float: left;
+}
+
+h2{
+  font-size: 10px;
+  font-family: 'Russo One', sans-serif;
+  /*padding-left: 90rem;*/
+  float: right;
+}
+
