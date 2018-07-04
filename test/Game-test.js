@@ -9,15 +9,6 @@ describe('Game', function () {
     assert.equal(newGame.snakes.length, 2)
   })
 
-  it.skip('should have no one win right away', function () {
-      const newGame = new Game();
-      console.log(newGame.playerOneWins)
-
-      assert.equal(newGame.playerOnewins, false)
-    //   assert.equal(newGame.playerTwowins, false)
-
-  })
-
   it('should be able to move down', function() {
       const newGame = new Game();
       newGame.animate()
