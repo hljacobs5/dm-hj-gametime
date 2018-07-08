@@ -15,8 +15,7 @@ describe('Game', function () {
       newGame.playerOneMoveDown();
       newGame.firstSnake.move()
       newGame.animate();
-      assert.equal(newGame.firstSnake.dyv, 1)
-      assert.equal(newGame.firstSnake.dxv, 0)
+      assert.equal(newGame.firstSnake.dy, 1)
   })
 
   it('should be able to move up', function() {
@@ -25,8 +24,7 @@ describe('Game', function () {
     newGame.playerOneMoveUp();
     newGame.firstSnake.move()
     newGame.animate();
-    assert.equal(newGame.firstSnake.dyv, 1)
-    assert.equal(newGame.firstSnake.dxv, 0)
+    assert.equal(newGame.firstSnake.dy, -1)
   })
 
   it('should be able to move right', function() {
@@ -35,8 +33,7 @@ describe('Game', function () {
     newGame.playerOneMoveRight();
     newGame.firstSnake.move()
     newGame.animate();
-    assert.equal(newGame.firstSnake.dyv, 0)
-    assert.equal(newGame.firstSnake.dxv, 1)
+    assert.equal(newGame.firstSnake.dx, 1)
   })
   
   it('should be able to move left', function() {
@@ -45,8 +42,7 @@ describe('Game', function () {
     newGame.playerOneMoveLeft();
     newGame.firstSnake.move()
     newGame.animate();
-    assert.equal(newGame.firstSnake.dyv, 0)
-    assert.equal(newGame.firstSnake.dxv, 1)
+    assert.equal(newGame.firstSnake.dx, -1)
   })
 
   it('should start off with no trail', function () {
@@ -60,7 +56,7 @@ describe('Game', function () {
       newGame.animate()
       assert.equal(newGame.firstSnake.trail.length, 1)
       newGame.animate();
-      newGame.animate(newGame.firstSnake.trail.length, 2)
+      assert.equal(newGame.firstSnake.trail.length, 2)
   })
 
   it('should be able to have player one collide with the right wall', function() {
